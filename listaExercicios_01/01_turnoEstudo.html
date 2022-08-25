@@ -12,10 +12,26 @@
 
     //ENTRADA
 
-    
+    let horario = prompt("horario do dia: (M-matutino, V-Vespertino, N-Noturno)");
+
+    let mensagem;
+
     //PROCESSAMENTO
 
-    
+    switch (horario) {
+        case "M":
+            mensagem = "Boa tarde";
+            break;
+        case "V":
+            mensagem = "Bom dia";
+            break;
+        case "N": mensagem = "Boa noite";
+            break;
+        default: mensagem = "invalido";
+    }
+
     //SAÍDA
+
+    document.write(`${mensagem}`)
 
 </script>

@@ -3,12 +3,25 @@
     //PROBLEMA: Faça um script que peça um número inteiro e determine se ele é par ou ímpar.
     */
 
-    //ENTRADA
+       //ENTRADA
 
+       const numero = parseInt(prompt("fale um numero inteiro"))
+    let resultado;
     
     //PROCESSAMENTO
 
+    resultado = numero % 2
+
+    switch(resultado){
+        case 0:
+            resultado = "par"
+            break;
+        default: 
+            resultado = "impar";
+    }
     
     //SAÍDA
+
+    document.write(`${resultado}`)
 
 </script>
