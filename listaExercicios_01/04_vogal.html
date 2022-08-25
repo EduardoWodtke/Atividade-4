@@ -4,10 +4,26 @@
 
     // ENTRADA
 
-    
+    const letra = prompt("infome um caracter")
+
+    let resposta;
+
     // PROCESSAMENTO
 
-    
+    switch (letra) {
+        case "a":
+        case "e":
+        case "i":
+        case "o":
+        case "u":
+            resposta = "vogal"
+            break;
+        default:
+            resposta = "consoante";
+    }
+
     // SAÍDA
+
+    document.write(`${resposta}`)
 
 </script>

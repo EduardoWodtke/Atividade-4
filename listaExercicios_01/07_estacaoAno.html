@@ -6,10 +6,65 @@
 
     //ENTRADA
 
+    const hemisfério = prompt("informe seu hemisferio: (N-Norte e S-Sul)")
+    const mes = prompt("informe o mes que esta:")
+
+    let resposta;
 
     //PROCESSAMENTO
 
-    
+    switch (hemisfério && mes) {
+        case "N":
+        case "Junho":
+        case "Julho":
+        case "Agosto":
+            resposta = "verão"
+            break;
+        case "S":
+        case "Junho":
+        case "Julho":
+        case "Agosto":
+            resposta = "inverno"
+            break;
+        case "N":
+        case "Dezembro":
+        case "Janeiro":
+        case "Fevereiro":
+            resposta = "Inverno"
+            break;
+            break;
+        case "S":
+        case "Dezembro":
+        case "Janeiro":
+        case "Fevereiro":
+            resposta = "Verão"
+            break;
+        case "N":
+        case "Setembro":
+        case "Outubro":
+        case "Novembro":
+            resposta = "Outono"
+            break;
+        case "S":
+        case "Setembro":
+        case "Outubro":
+        case "Novembro":
+            resposta = "primavera"
+            break;
+        case "N":
+        case "março":
+        case "abril":
+        case "maio":
+            resposta = "Primavera"
+        case "N":
+        case "março":
+        case "abril":
+        case "maio":
+            resposta = "Outono"
+            break;
+    }
     //SAÍDA
+
+    document.write(`${resposta}`)
 
 </script>

@@ -9,10 +9,24 @@
 
     // ENTRADA
 
-    
+    let porte = prompt("informe o porte do seu cão: (G-Grande, M-Medio e P-Pequeno)")
+
+    let idade = prompt("Informe a idade do seu cão: (1, 2, 3...)")
+
     // PROCESSAMENTO
 
-    
+    switch (porte) {
+        case "G":
+            idade = idade * 7
+            break;
+        case "M":
+            idade = idade * 6
+        case "P":
+            idade = idade * 5
+    }
+
     // SAÍDA
 
-    </script>
+    document.write(`${idade}`)
+
+</script>

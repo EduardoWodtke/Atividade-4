@@ -11,10 +11,90 @@
 
     //ENTRADA
 
-    
+    const telefonou = prompt("telefonou para vitima? (S-Sim ou N-Não)")
+    const localCrime = prompt("esteve no local do crime? (S-Sim ou N-Não)")
+    const moraPerto = prompt("mora perto da vitima? (S-Sim ou N-Não)")
+    const devia = prompt("devia para vítima? (S-Sim ou N-Não)")
+    const trabalhou = prompt("trabalhou para vítima? (S-Sim ou N-Não)")
+
+    let pontos;
+
+    let resposta;
+
     //PROCESSAMENTO
 
-    
+    switch (telefonou) {
+        case "S":
+            pontos = 1
+            break;
+        case "N":
+            pontos = 0;
+            break;
+        default:
+            resposta = "invalido";
+    }
+    switch (localCrime) {
+        case "S":
+            pontos = pontos + 1
+            break;
+        case "N":
+            pontos = pontos + 0;
+            break;
+        default:
+            resposta = "invalido"
+    }
+    switch (moraPerto) {
+        case "S":
+            pontos = pontos + 1
+            break;
+        case "N":
+            pontos = pontos + 0;
+            break;
+        default:
+            resposta = "invalido"
+    }
+    switch (devia) {
+        case "S":
+            pontos = pontos + 1
+            break;
+        case "N":
+            pontos = pontos + 0;
+            break;
+        default:
+            resposta = "invalido";
+    }
+    switch (trabalhou) {
+        case "S":
+            pontos = pontos + 1
+            break;
+        case "N":
+            pontos = pontos + 0;
+            break;
+        default:
+            resposta = "invalido";
+    }
+    switch (pontos) {
+        case 0:
+        case 1:
+            resposta = "inocente"
+            break;
+        case 2:
+            resposta = "suspeito"
+            break
+        case 3:
+        case 4:
+            resposta = "cumplice"
+            break;
+        case 5:
+            resposta = "assasino";
+    }
+
+
+
+
     //SAÍDA
+
+    document.write(`${resposta}`)
+
 
 </script>
