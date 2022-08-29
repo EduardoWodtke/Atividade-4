@@ -6,63 +6,65 @@
 
     //ENTRADA
 
-    const hemisfério = prompt("informe seu hemisferio: (N-Norte e S-Sul)")
-    const mes = prompt("informe o mes que esta:")
+    const hemisferio = prompt("informe seu hemisferio: (N-Norte | S-Sul)").toUpperCase();
+    const mes = prompt("informe o mes que esta em numeros:")
 
     let resposta;
 
     //PROCESSAMENTO
 
-    switch (hemisfério && mes) {
+    switch (hemisferio) {
         case "N":
-        case "Junho":
-        case "Julho":
-        case "Agosto":
-            resposta = "verão"
+            switch (mes){
+                case "1":
+                case "2":
+                case "3":
+                    resposta = "inverno"
+                break;
+                case "4":
+                case "5":
+                case "6":
+                    resposta = "primavera"
+                    break;
+                case "7":
+                case "8":
+                case "9":
+                    resposta = "verão"
+                    break;
+                case "10":
+                case "11":
+                case "12":
+                    resposta = "Outono"
+            }
             break;
         case "S":
-        case "Junho":
-        case "Julho":
-        case "Agosto":
-            resposta = "inverno"
+            switch (mes){
+                case "1":
+                case "2":
+                case "3":
+                    resposta = "verão"
+                break;
+                case "4":
+                case "5":
+                case "6":
+                    resposta = "outono"
+                    break;
+                case "7":
+                case "8":
+                case "9":
+                    resposta = "inverno"
+                    break;
+                case "10":
+                case "11":
+                case "12":
+                    resposta = "primavera"
+            }
             break;
-        case "N":
-        case "Dezembro":
-        case "Janeiro":
-        case "Fevereiro":
-            resposta = "Inverno"
-            break;
-            break;
-        case "S":
-        case "Dezembro":
-        case "Janeiro":
-        case "Fevereiro":
-            resposta = "Verão"
-            break;
-        case "N":
-        case "Setembro":
-        case "Outubro":
-        case "Novembro":
-            resposta = "Outono"
-            break;
-        case "S":
-        case "Setembro":
-        case "Outubro":
-        case "Novembro":
-            resposta = "primavera"
-            break;
-        case "N":
-        case "março":
-        case "abril":
-        case "maio":
-            resposta = "Primavera"
-        case "N":
-        case "março":
-        case "abril":
-        case "maio":
-            resposta = "Outono"
+        default:
+            resposta = "invalido";
             break;
     }
+
     //SAÍDA
 
     document.write(`${resposta}`)
